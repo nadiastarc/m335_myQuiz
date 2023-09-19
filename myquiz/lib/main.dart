@@ -28,8 +28,8 @@ class MyApp extends StatelessWidget {
         body: Container(
             decoration: BoxDecoration(
                 image: DecorationImage(
-              image: AssetImage("assets/SubWay.jpg"),
-              fit: BoxFit.fitWidth,
+              image: AssetImage("assets/studyfy2.jpg"),
+              fit: BoxFit.fitHeight,
             )),
             child: Center(
                 child: Padding(
@@ -39,18 +39,15 @@ class MyApp extends StatelessWidget {
                       children: [
                         Spacer(flex: 2),
                         Text(
-                          "STUDYfY",
-                          style: AppNameTextStyle(),
+                          "STUDYFY",
+                          style: AppNameTextStyle(color: Colors.black),
                         ),
                         Spacer(
                           flex: 2,
                         ),
-                        bigButton(context, () => QuizPage(), "Quiz Starten"),
+                        bigButton(context, () => QuizPage(), "start Quiz"),
                         Spacer(),
-                        bigButton(
-                            context, () => CreateQuiz(), "Quiz erstellen"),
-                        Spacer(),
-                        bigButton(context, () => EditQuiz(), "Quiz bearbeiten"),
+                        bigButton(context, () => CreateQuiz(), "create Quiz"),
                         Spacer(),
                         roundButton(context),
                         Spacer(

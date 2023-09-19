@@ -71,15 +71,14 @@ class _QuizPageState extends State<QuizPage> {
       body: Container(
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage("assets/SubWay.jpg"), fit: BoxFit.fitHeight)),
+                image: AssetImage("assets/studyfy2.jpg"),
+                fit: BoxFit.fitHeight)),
         child: Center(
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Spacer(),
-                Text("Topic", style: headerTextStyle(color: Colors.white70)),
                 Spacer(),
                 Text(
                   currenQuestion.question,
@@ -89,7 +88,7 @@ class _QuizPageState extends State<QuizPage> {
                 Spacer(),
                 Text(
                   "Current Progress",
-                  style: underTitleTextStyle(color: Colors.white54),
+                  style: underTitleTextStyle(color: Colors.white70),
                 ),
                 StepProgressIndicator(
                   totalSteps: 6,
@@ -112,7 +111,7 @@ class _QuizPageState extends State<QuizPage> {
                 ),
                 Spacer(),
                 Text("Points: " + userPoints.toString(),
-                    style: headerTextStyle(color: Colors.white70)),
+                    style: headerTextStyle(color: Colors.white)),
                 Spacer(),
                 GestureDetector(
                   child: answerCard(answers[0], context,

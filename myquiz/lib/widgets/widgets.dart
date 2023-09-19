@@ -5,7 +5,6 @@ import 'package:myquiz/main.dart';
 import 'package:myquiz/pages/instructions.dart';
 import 'package:myquiz/pages/quizPage.dart';
 import 'package:myquiz/style/style.dart';
-import 'package:scale_button/scale_button.dart';
 
 PreferredSizeWidget myAppBar(String title) {
   return AppBar(
@@ -96,7 +95,7 @@ Widget roundButton(BuildContext context) {
 Widget createCardTopic(String title, String helper) {
   return Container(
     child: TextFormField(
-      cursorColor: Colors.blueAccent,
+      cursorColor: Colors.cyan,
       maxLength: 50,
       decoration: InputDecoration(
         labelText: title,
@@ -137,4 +136,3 @@ Widget createCard() {
     ),
   );
 }
-
