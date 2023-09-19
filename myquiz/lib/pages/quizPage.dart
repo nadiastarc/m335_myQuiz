@@ -22,10 +22,10 @@ class _QuizPageState extends State<QuizPage> {
   late List<String> answers;
   late List<int> questionIndex;
   List<bool?> answerValidation = [null, null, null, null];
-
+  int listLengh = questionList.length;
   @override
   void initState() {
-    questionIndex = getRandomQuestionIndex(6);
+    questionIndex = getRandomQuestionIndex(listLengh);
     super.initState();
     loadNewQuestion();
   }
