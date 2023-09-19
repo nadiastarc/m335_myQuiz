@@ -54,7 +54,7 @@ class _QuizPageState extends State<QuizPage> {
 
     await Future.delayed(Duration(seconds: 2));
     currentLvl++;
-    if (currentLvl <= 6) {
+    if (currentLvl <= listLengh) {
       loadNewQuestion();
     } else {
       Navigator.push(
@@ -91,7 +91,7 @@ class _QuizPageState extends State<QuizPage> {
                   style: underTitleTextStyle(color: Colors.white70),
                 ),
                 StepProgressIndicator(
-                  totalSteps: 6,
+                  totalSteps: listLengh,
                   currentStep: currentLvl,
                   size: 8,
                   padding: 0,

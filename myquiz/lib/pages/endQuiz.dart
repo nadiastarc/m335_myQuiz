@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myquiz/logic/questions.dart';
 import 'package:myquiz/main.dart';
 import 'package:myquiz/style/style.dart';
 import 'package:myquiz/widgets/widgets.dart';
@@ -6,6 +7,7 @@ import 'package:step_progress_indicator/step_progress_indicator.dart';
 
 class endQuiz extends StatelessWidget {
   final int userPoints;
+
   const endQuiz({Key? key, required this.userPoints}) : super(key: key);
 
   @override
@@ -29,16 +31,14 @@ class endQuiz extends StatelessWidget {
                         ),
                         Spacer(),
                         CircularStepProgressIndicator(
-                          totalSteps: 6,
+                          totalSteps: questionList.length,
                           currentStep: userPoints,
                           width: 100,
                           roundedCap: (_, isSelected) => isSelected,
                         ),
                         Spacer(),
                         Text(
-                          "You have " +
-                              userPoints.toString() +
-                              " of 6 Questions right.",
+                          "You have ${userPoints.toString()} of ${questionList.length} Questions right.",
                           textAlign: TextAlign.center,
                           style: headerTextStyle(color: Colors.white),
                         ),
