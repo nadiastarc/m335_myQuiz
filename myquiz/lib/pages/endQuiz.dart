@@ -38,7 +38,7 @@ class endQuiz extends StatelessWidget {
                         Text(
                           "You have " +
                               userPoints.toString() +
-                              " von 6 Fragen richtig beantwortet.",
+                              " of 6 Questions right.",
                           textAlign: TextAlign.center,
                           style: headerTextStyle(color: Colors.white),
                         ),

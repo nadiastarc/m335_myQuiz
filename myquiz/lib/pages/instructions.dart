@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:myquiz/main.dart';
+import 'package:myquiz/widgets/widgets.dart';
 
 class Instruction extends StatefulWidget {
   const Instruction({super.key});
@@ -20,7 +22,9 @@ class _Instruction extends State<Instruction> {
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-            Spacer(),
+            Spacer(
+              flex: 2,
+            ),
             Container(
               width: 300,
               height: 200,
@@ -38,7 +42,11 @@ class _Instruction extends State<Instruction> {
                   child: Text(
                       'How to create a quiz? \n \n This function is not available')),
             ),
-            Spacer(),
+            Spacer(
+              flex: 2,
+            ),
+            bigButton(context, () => MyApp(), "go back"),
+            Spacer()
           ]),
         ),
       ),
